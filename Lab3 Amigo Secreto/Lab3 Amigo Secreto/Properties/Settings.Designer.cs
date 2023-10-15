@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MainAmigoSecreto.Properties
+namespace Lab3_Amigo_Secreto.Properties
 {
 
 

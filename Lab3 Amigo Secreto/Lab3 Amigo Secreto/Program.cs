@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainAmigoSecreto
+namespace Lab3_Amigo_Secreto
 {
     internal static class Program
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainAmigoSecreto
+namespace Lab3_Amigo_Secreto
 {
     public partial class Form1 : Form
     {

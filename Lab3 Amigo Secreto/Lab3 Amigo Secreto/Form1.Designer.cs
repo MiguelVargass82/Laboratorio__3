@@ -1,4 +1,4 @@
-﻿namespace MainAmigoSecreto
+﻿namespace Lab3_Amigo_Secreto
 {
     partial class Form1
     {
