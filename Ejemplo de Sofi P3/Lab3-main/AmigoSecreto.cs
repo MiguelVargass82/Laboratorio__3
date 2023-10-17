@@ -76,33 +76,41 @@ namespace Lab3
                 auxiliar[ii] = jugadores[ii];
             }                                                              
             bool ban = true;
-            
+            Jugador[] auxiliar2 = new Jugador[numJugadores];
+
+
             while (ban)
             {
                 bool ban2 = true;
                 int i = 0;
 
-                DesorganizarVector(auxiliar);
+                auxiliar2 = DesorganizarVector(auxiliar);
 
-                while (i<jugadores.Length-1 || ban2)          // Aca comprobamos que ninguna posicion del vector desorganizado sea igual a la del vector original
+                while (i<jugadores.Length-1 && ban2)          // Aca comprobamos que ninguna posicion del vector desorganizado sea igual a la del vector original
                 {                                          //Osea nadie sea su propio amigo secreto
                     
-                    if (auxiliar[i] == jugadores[i])
+                    if (auxiliar2[i] == jugadores[i])
                     {                                    //En el momento en que alguna posicion coincide el ciclo pequeño se cierra y quedan las condiciones ...
-                        ban2 = false;                  //...para que el ciclo grande se vuelva a ejecutar
+                        ban2 = false;
+                                               //...para que el ciclo grande se vuelva a ejecutar
                     }
                     i++;
+                    
                 }
-
+                
                 if (ban2)
                 {
                     ban = false;
+                    
                 }
+
+              
             }
 
             string[] nombre1 = SacarNombres(jugadores);
-            string[] nombre2 = SacarNombres(auxiliar);
-            Console.WriteLine(nombre1[1], nombre2[1]);      
+            string[] nombre2 = SacarNombres(auxiliar2);
+            Console.WriteLine(nombre1[1]);
+                Console.WriteLine(nombre2[1]);      
 
 
 
@@ -113,7 +121,7 @@ namespace Lab3
         } //Fin funcion
 
 
-        public static void DesorganizarVector(Jugador[] vector)
+        public static Jugador[] DesorganizarVector(Jugador[] vector)
         {
             Random random = new Random();
 
@@ -126,6 +134,7 @@ namespace Lab3
                 vector[i] = vector[j];
                 vector[j] = temp;
             }
+            return vector;
         }
 
 

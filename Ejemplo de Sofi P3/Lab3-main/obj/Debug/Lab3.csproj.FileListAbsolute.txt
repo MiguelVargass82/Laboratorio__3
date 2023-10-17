@@ -12,3 +12,10 @@ C:\Users\migue\Desktop\Ejemplo de Sofi P3\Lab3-main\obj\Debug\Lab3.csproj.Assemb
 C:\Users\migue\Desktop\Ejemplo de Sofi P3\Lab3-main\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
 C:\Users\migue\Desktop\Ejemplo de Sofi P3\Lab3-main\obj\Debug\Lab3.exe
 C:\Users\migue\Desktop\Ejemplo de Sofi P3\Lab3-main\obj\Debug\Lab3.pdb
+C:\Users\HP\Documents\GitHub\Laboratorio__3\Ejemplo de Sofi P3\Lab3-main\bin\Debug\Lab3.exe.config
+C:\Users\HP\Documents\GitHub\Laboratorio__3\Ejemplo de Sofi P3\Lab3-main\bin\Debug\Lab3.exe
+C:\Users\HP\Documents\GitHub\Laboratorio__3\Ejemplo de Sofi P3\Lab3-main\bin\Debug\Lab3.pdb
+C:\Users\HP\Documents\GitHub\Laboratorio__3\Ejemplo de Sofi P3\Lab3-main\obj\Debug\Lab3.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Laboratorio__3\Ejemplo de Sofi P3\Lab3-main\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\Laboratorio__3\Ejemplo de Sofi P3\Lab3-main\obj\Debug\Lab3.exe
+C:\Users\HP\Documents\GitHub\Laboratorio__3\Ejemplo de Sofi P3\Lab3-main\obj\Debug\Lab3.pdb
