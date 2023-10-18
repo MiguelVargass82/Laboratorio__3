@@ -1,0 +1,21 @@
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.exe.config
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.exe
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.pdb
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero_de_prueba.Form1.resources
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero_de_prueba.Properties.Resources.resources
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.csproj.GenerateResource.cache
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.exe
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.pdb
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.exe.config
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.exe
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.pdb
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\obj\Debug\tablero_de_prueba.Form1.resources
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\obj\Debug\tablero_de_prueba.Properties.Resources.resources
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.exe
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.pdb
+C:\Users\HP\Desktop\tablero de prueba\tablero de prueba\obj\Debug\tablero_de_prueba.correo.resources

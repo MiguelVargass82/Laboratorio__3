@@ -160,6 +160,7 @@
             this.consultCorreo.Text = "Consultar";
             this.consultCorreo.UseVisualStyleBackColor = true;
             this.consultCorreo.Visible = false;
+            this.consultCorreo.Click += new System.EventHandler(this.consultCorreo_Click);
             // 
             // btnGuardar
             // 
@@ -177,7 +178,7 @@
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.Peru;
-            this.lblFecha.Location = new System.Drawing.Point(404, 123);
+            this.lblFecha.Location = new System.Drawing.Point(182, 72);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblFecha.Size = new System.Drawing.Size(45, 17);

@@ -61,5 +61,10 @@ namespace Lab3_Amigo_Secreto
                 MessageBox.Show("Papi sea serio y de todos los valores pedidos");
             }
         }
+
+        private void consultCorreo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
