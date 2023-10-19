@@ -41,7 +41,7 @@
             this.amigolbl2 = new System.Windows.Forms.Label();
             this.amigolbl1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.salirbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPara
@@ -70,13 +70,13 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(680, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(680, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(376, 273);
+            this.button1.Location = new System.Drawing.Point(108, 273);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 39);
             this.button1.TabIndex = 5;
@@ -165,22 +165,22 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Regalo ideal de";
             // 
-            // button2
+            // salirbtn
             // 
-            this.button2.Location = new System.Drawing.Point(191, 273);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 39);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "INICIAR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.salirbtn.Location = new System.Drawing.Point(403, 273);
+            this.salirbtn.Name = "salirbtn";
+            this.salirbtn.Size = new System.Drawing.Size(110, 39);
+            this.salirbtn.TabIndex = 15;
+            this.salirbtn.Text = "SALIR";
+            this.salirbtn.UseVisualStyleBackColor = true;
+            this.salirbtn.Click += new System.EventHandler(this.salirbtn_Click);
             // 
             // correo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 373);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.salirbtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.amigolbl1);
             this.Controls.Add(this.amigolbl2);
@@ -208,15 +208,15 @@
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label correolbl;
-        private System.Windows.Forms.Label amigolbl;
-        private System.Windows.Forms.Label endulzadalbl;
-        private System.Windows.Forms.Label regalolbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label amigolbl2;
-        private System.Windows.Forms.Label amigolbl1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Label correolbl;
+        public System.Windows.Forms.Label amigolbl;
+        public System.Windows.Forms.Label endulzadalbl;
+        public System.Windows.Forms.Label regalolbl;
+        public System.Windows.Forms.Label amigolbl2;
+        public System.Windows.Forms.Label amigolbl1;
+        private System.Windows.Forms.Button salirbtn;
     }
 }

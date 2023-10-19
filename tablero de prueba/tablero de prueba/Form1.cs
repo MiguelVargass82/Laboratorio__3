@@ -154,7 +154,38 @@ namespace tablero_de_prueba
             MessageBox.Show(Ocasion.SacarNombres(Ocasion.jugadores)[0]);
             MessageBox.Show(Ocasion.SacarNombres(amigos)[0]);
 
+
+           string[] nombresAmi = Ocasion.SacarNombres(amigos); //Lista de amigos secretos
+
+            string[]listCorre = Ocasion.SacarCorreos(Ocasion.jugadores); //lista de correos personales
+
+            string[]listendulza = Ocasion.SacarEndulzadas(amigos); //lista de eldulzadas
+
+            string[] listrega = Ocasion.SacarRegalos(amigos);        //Lista de regalos
+
+
             correo miforma = new correo();
+
+            miforma.nombresAmigos = nombresAmi;
+
+            miforma.listCorreos = listCorre;        //Asignamos a las variables de el otro formularios los valores que necesitamos de este
+
+            miforma.listendulzadas = listendulza;
+
+            miforma.listregalo = listrega;
+
+
+            miforma.amigolbl.Text = nombresAmi[0];
+            miforma.amigolbl2.Text = nombresAmi[0];     //Necesitamos que esto aparezca de primeras
+            miforma.amigolbl1.Text = nombresAmi[0];
+
+            miforma.correolbl.Text = listCorre[0];
+            miforma.endulzadalbl.Text = listendulza[0];
+            miforma.regalolbl.Text = listrega[0];
+
+
+
+
             miforma.Ocasionn = Ocasion;
             miforma.amigos = amigos;
             miforma.Show();
