@@ -22,7 +22,7 @@ namespace tablero_de_prueba
 
         private void txtCorreo_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

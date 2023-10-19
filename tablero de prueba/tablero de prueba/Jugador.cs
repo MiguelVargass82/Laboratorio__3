@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    internal class Jugador
+    public class Jugador
     {
         String nombre;
         String correo;

@@ -14,26 +14,14 @@ namespace tablero_de_prueba
     public partial class Form1 : Form
     {
 
-        private Jugador[] jugadores;
-        public Form1()
+       
+        public int numJug;
+        public AmigoSecreto Ocasion;
+        public Jugador[] participantes;
+         public Form1()
         {
             InitializeComponent();
-
-          
-            string num = "10";
-            int numm = int.Parse(num);
-
-            AmigoSecreto ejemplo = new AmigoSecreto(numm);
-
-         //   jugadores = ejemplo.llenarDatos();
-
-
-           
-
-            ejemplo.Todo(jugadores);
             
-
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -58,10 +46,12 @@ namespace tablero_de_prueba
                 label2.Visible = false;
                 dateTimePicker1.Visible = false;
                 btn_fecha.Visible = false;
+                valorEndu.Visible = false;
+                valorRega.Visible = false;
+                lblValorEndu.Visible = false;
+                lblValorRega.Visible = false;
 
-                correo miforma = new correo();
-
-                miforma.Show();
+                Ocasion = new AmigoSecreto(numJug);
 
             }
             else
@@ -82,53 +72,88 @@ namespace tablero_de_prueba
         }
 
 
-        private void btnJugad_Click(object sender, EventArgs e)
+        public void btnJugad_Click(object sender, EventArgs e)
         {
-            int veces = Convert.ToInt32(contJugad.Value);
-            int jugador = 1;
-            while (veces != 0 && jugador <= contJugad.Value)
-            {
-
-
-            }
+            this.numJug = Convert.ToInt32(contJugad.Value);
+           
             txtDato1.Visible = true;
             txtDato2.Visible = true;
             txtDato3.Visible = true;
+            lblRegalo.Visible = true;
             Nombre.Visible = true;
             correo.Visible = true;
             endulzada.Visible = true;
+            regalo.Visible = true;
             btnSubir.Visible = true;
-            
+
+            Jugador[] participantes = new Jugador[numJug];  //creacion del vector
+
+            btnJugad.Enabled = false;
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (jugadores != null)
-            {
-                AmigoSecreto amigoSecreto = new AmigoSecreto(jugadores.Length);
-                string[] nombresJugadores = jugadores.Select(jugador => jugador.getNombre()).ToArray();
-                amigoSecreto.NombreComboBox(nombresJugadores); // Usar jugadores en este contexto
-            }
-            else
-            {
-                // Manejo de error si jugadores no ha sido inicializado.
-            }
+           //NADA
         }
 
-        private void btnSubir_Click(object sender, EventArgs e)
-        {
-            int contador = 0;
-            for(int i = 0; i < contJugad.Value; i++)
-            {
 
-                Nombre.Clear();
-                correo.Clear();
-                endulzada.Clear();
-                regalo.Clear();
-                contador++;
-            }
+        //En el evento del boton subir realizaremos la asignacion al vector del cada jugador en cada posicion
+
+        int cont = 0;
+        static int nummm = 8;           //Le puse static y UY QUIETO!!
+        
+        
+
+       
+        public void btnSubir_Click(object sender, EventArgs e)
+        {
+             
             
 
-            string textoIngresado = Nombre.Text;
+            // Variable que cambiara por el valor de las personas que definio santiago
+            string nombrev = Nombre.Text;
+            string correov = correo.Text;
+            string endulzadav = endulzada.Text;
+            string regalov = regalo.Text;      //Se supone que ya debe funcionar la asignacion de datos (necesitamos el numero de jugadores)
+
+            Ocasion.llenarDatos(cont, nombrev, correov, endulzadav, regalov);
+
+            Ocasion.
+
+            
+
+            //participantes = Ocasion.llenarDatos(cont, participantes, nombrev, correov, endulzadav, regalov);
+
+            Nombre.Clear();
+            correo.Clear();
+            endulzada.Clear();
+            regalo.Clear();
+          
+            cont++;
+       
+        }
+        //NECESITO SACAR DE ESTE AMBITO LA VARIABLE PARTICIPANTES
+
+
+        private void saltar_Click(object sender, EventArgs e)
+        {
+
+
+            Jugador[] amigos = Ocasion.DesorganizadoAcertado(participantes);
+
+            // La idea es que aca comienze a mostrar los correos 
+
+
+            MessageBox.Show((Ocasion.SacarNombres(participantes)[1]));
+            // Me esta lanzando un error que creemos que puede ser que no se esta usando la misma variable 
+            //participantes que definimos anteriormente
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            correo miforma = new correo();
+
+            miforma.Show();
+
         }
     }
 }
