@@ -31,38 +31,51 @@ namespace tablero_de_prueba
         }
         public void btnJugad_Click(object sender, EventArgs e)
         {
-            
-            if (numEndu.Text != "" && frecEndul.Text != "")
+
+            if (numEndu.Text != "" && frecEndul.Text != "" && valorEndu.Text != "" && valorRega.Text != "")
             {
-                int tiempoDias = Convert.ToInt32(numEndu.Text) * Convert.ToInt32(frecEndul.Text);
-                DateTime fechaSeleccionada = dateTimePicker1.Value;
-                DateTime fechaFinal = fechaSeleccionada.AddDays(tiempoDias);
-                lblFecha.Text = " El juego terminará el dia: " + fechaFinal.ToString()   + "\n Proxima endulzada: " + fechaSeleccionada.AddDays(Convert.ToInt32(frecEndul.Text));
-                lblFecha.Visible = true;
-                lblNum.Visible = false;
-                lblFrec.Visible = false;
-                numEndu.Visible = false;
-                frecEndul.Visible = false;
-                label2.Visible = false;
-                dateTimePicker1.Visible = false;
-                valorEndu.Visible = false;
-                valorRega.Visible = false;
-                lblValorEndu.Visible = false;
-                lblValorRega.Visible = false;
+                int numEnduF;
+                int frecEndulF;
+                int valorRegaF;
+                int valorEnduF;
+                if (int.TryParse(numEndu.Text, out numEnduF) && int.TryParse(frecEndul.Text, out frecEndulF) && int.TryParse(valorEndu.Text, out valorEnduF) && int.TryParse(valorRega.Text, out valorRegaF))
+                {
+                    int tiempoDias = Convert.ToInt32(numEndu.Text) * Convert.ToInt32(frecEndul.Text);
+                    DateTime fechaSeleccionada = dateTimePicker1.Value;
+                    DateTime fechaFinal = fechaSeleccionada.AddDays(tiempoDias);
+                    lblFecha.Text = " El juego terminará el dia: " + fechaFinal.ToString() + "\n Proxima endulzada: " + fechaSeleccionada.AddDays(Convert.ToInt32(frecEndul.Text));
+                    lblFecha.Visible = true;
+                    lblNum.Visible = false;
+                    lblFrec.Visible = false;
+                    numEndu.Visible = false;
+                    frecEndul.Visible = false;
+                    label2.Visible = false;
+                    dateTimePicker1.Visible = false;
+                    valorEndu.Visible = false;
+                    valorRega.Visible = false;
+                    lblValorEndu.Visible = false;
+                    lblValorRega.Visible = false;
 
-                this.numJug = Convert.ToInt32(contJugad.Value);
+                    this.numJug = Convert.ToInt32(contJugad.Value);
 
-                txtDato1.Visible = true;
-                txtDato2.Visible = true;
-                txtDato3.Visible = true;
-                lblRegalo.Visible = true;
-                Nombre.Visible = true;
-                correo.Visible = true;
-                endulzada.Visible = true;
-                regalo.Visible = true;
-                btnSubir.Visible = true;
+                    txtDato1.Visible = true;
+                    txtDato2.Visible = true;
+                    txtDato3.Visible = true;
+                    lblRegalo.Visible = true;
+                    Nombre.Visible = true;
+                    correo.Visible = true;
+                    endulzada.Visible = true;
+                    regalo.Visible = true;
+                    btnSubir.Visible = true;
+                    saltar.Visible = true;
 
-                Ocasion = new AmigoSecreto(numJug);
+                    Ocasion = new AmigoSecreto(numJug);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, no ingreses letras >:)");
+                }
+                
 
             }
             else
@@ -152,6 +165,11 @@ namespace tablero_de_prueba
 
             miforma.Show();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
