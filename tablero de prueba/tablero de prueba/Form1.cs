@@ -29,15 +29,15 @@ namespace tablero_de_prueba
             DateTime fecha = dateTimePicker1.Value;
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public void btnJugad_Click(object sender, EventArgs e)
         {
+            
             if (numEndu.Text != "" && frecEndul.Text != "")
             {
                 int tiempoDias = Convert.ToInt32(numEndu.Text) * Convert.ToInt32(frecEndul.Text);
                 DateTime fechaSeleccionada = dateTimePicker1.Value;
                 DateTime fechaFinal = fechaSeleccionada.AddDays(tiempoDias);
-                lblFecha.Text = "El juego terminará el dia: " + fechaFinal.ToString();
+                lblFecha.Text = " El juego terminará el dia: " + fechaFinal.ToString()   + "\n Proxima endulzada: " + fechaSeleccionada.AddDays(Convert.ToInt32(frecEndul.Text));
                 lblFecha.Visible = true;
                 lblNum.Visible = false;
                 lblFrec.Visible = false;
@@ -45,11 +45,22 @@ namespace tablero_de_prueba
                 frecEndul.Visible = false;
                 label2.Visible = false;
                 dateTimePicker1.Visible = false;
-                btn_fecha.Visible = false;
                 valorEndu.Visible = false;
                 valorRega.Visible = false;
                 lblValorEndu.Visible = false;
                 lblValorRega.Visible = false;
+
+                this.numJug = Convert.ToInt32(contJugad.Value);
+
+                txtDato1.Visible = true;
+                txtDato2.Visible = true;
+                txtDato3.Visible = true;
+                lblRegalo.Visible = true;
+                Nombre.Visible = true;
+                correo.Visible = true;
+                endulzada.Visible = true;
+                regalo.Visible = true;
+                btnSubir.Visible = true;
 
                 Ocasion = new AmigoSecreto(numJug);
 
@@ -59,9 +70,13 @@ namespace tablero_de_prueba
                 MessageBox.Show("Papi sea serio y de todos los valores pedidos");
             }
 
+            Jugador[] participantes = new Jugador[numJug];  //creacion del vector
 
+
+            btnJugad.Enabled = false;
         }
 
+       
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -72,27 +87,10 @@ namespace tablero_de_prueba
         }
 
 
-        public void btnJugad_Click(object sender, EventArgs e)
-        {
-            this.numJug = Convert.ToInt32(contJugad.Value);
-           
-            txtDato1.Visible = true;
-            txtDato2.Visible = true;
-            txtDato3.Visible = true;
-            lblRegalo.Visible = true;
-            Nombre.Visible = true;
-            correo.Visible = true;
-            endulzada.Visible = true;
-            regalo.Visible = true;
-            btnSubir.Visible = true;
-
-            Jugador[] participantes = new Jugador[numJug];  //creacion del vector
-
-            btnJugad.Enabled = false;
-        }
+       
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           //NADA
+           
         }
 
 
@@ -117,9 +115,9 @@ namespace tablero_de_prueba
 
             Ocasion.llenarDatos(cont, nombrev, correov, endulzadav, regalov);
 
-            Ocasion.
 
-            
+
+
 
             //participantes = Ocasion.llenarDatos(cont, participantes, nombrev, correov, endulzadav, regalov);
 

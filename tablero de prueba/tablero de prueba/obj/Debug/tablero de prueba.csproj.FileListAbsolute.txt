@@ -30,3 +30,4 @@ C:\Users\migue\OneDrive\Escritorio\UdeA\3er Semestre\Logica I\Laboratorio 3\Repo
 C:\Users\migue\OneDrive\Escritorio\UdeA\3er Semestre\Logica I\Laboratorio 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.exe.config
 C:\Users\migue\OneDrive\Escritorio\UdeA\3er Semestre\Logica I\Laboratorio 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.exe
 C:\Users\migue\OneDrive\Escritorio\UdeA\3er Semestre\Logica I\Laboratorio 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.pdb
+C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero_de_prueba.correo.resources

@@ -18,7 +18,7 @@ namespace tablero_de_prueba
 
         public AmigoSecreto(int numJugadores)
         {
-            this.jugadores = new Jugador[2];
+            this.jugadores = new Jugador[numJugadores];
             this.numJugadores = numJugadores;
 
 
