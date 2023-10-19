@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,7 @@ namespace tablero_de_prueba
        
         public int numJug;
         public AmigoSecreto Ocasion;
-        public Jugador[] participantes;
+        public Jugador[] participantes; //Participantes no esta haciendo nada
          public Form1()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace tablero_de_prueba
             DateTime fecha = dateTimePicker1.Value;
 
         }
-        public void btnJugad_Click(object sender, EventArgs e)
+        public void btnJugad_Click(object sender, EventArgs e)  //BOTON GUARDAR (1)
         {
 
             if (numEndu.Text != "" && frecEndul.Text != "" && valorEndu.Text != "" && valorRega.Text != "")
@@ -69,7 +70,9 @@ namespace tablero_de_prueba
                     btnSubir.Visible = true;
                     saltar.Visible = true;
 
-                    Ocasion = new AmigoSecreto(numJug);
+                   Ocasion = new AmigoSecreto(numJug);   //Definimso un objeto de la clase amigo secreto 
+                                                          //Mediante ocasion podremos acceder a los datos que necesitemos
+                    //Osea que numJug si funciona
                 }
                 else
                 {
@@ -109,67 +112,69 @@ namespace tablero_de_prueba
 
         //En el evento del boton subir realizaremos la asignacion al vector del cada jugador en cada posicion
 
-        int cont = 0;
-        static int nummm = 8;           //Le puse static y UY QUIETO!!
-        
-        
-
-       
-        public void btnSubir_Click(object sender, EventArgs e)
-        {
-             
-            
-
-            // Variable que cambiara por el valor de las personas que definio santiago
-            string nombrev = Nombre.Text;
-            string correov = correo.Text;
-            string endulzadav = endulzada.Text;
-            string regalov = regalo.Text;      //Se supone que ya debe funcionar la asignacion de datos (necesitamos el numero de jugadores)
-
-            Ocasion.llenarDatos(cont, nombrev, correov, endulzadav, regalov);
-
-
-
-
-
-            //participantes = Ocasion.llenarDatos(cont, participantes, nombrev, correov, endulzadav, regalov);
-
-            Nombre.Clear();
-            correo.Clear();
-            endulzada.Clear();
-            regalo.Clear();
-          
-            cont++;
-       
-        }
-        //NECESITO SACAR DE ESTE AMBITO LA VARIABLE PARTICIPANTES
-
-
-        private void saltar_Click(object sender, EventArgs e)
+        int cont = 0;   //Definimos un contador que interara en las posiciones                         
+        public void btnSubir_Click(object sender, EventArgs e)  //BOTON SUBIR
         {
 
+            if (cont < numJug)
+            {
 
-            Jugador[] amigos = Ocasion.DesorganizadoAcertado(participantes);
+
+                string nombrev = Nombre.Text;           //Extraemos los datos de los textbox cada vez que presionemos el boton
+                string correov = correo.Text;
+                string endulzadav = endulzada.Text;
+                string regalov = regalo.Text;
+
+                Ocasion.llenarDatos(cont, nombrev, correov, endulzadav, regalov);   //Aplicamos la funcion llenar datos para el objeto jugador
+
+                Nombre.Clear();
+                correo.Clear();
+                endulzada.Clear();
+                regalo.Clear();
+
+                cont++;
+            }
+            else
+            {
+                MessageBox.Show("Estas definiendo mas jugadores de los que estableciste anteriormente");
+            }
+        }//Fin del evento boton subir
+       
+
+
+        private void saltar_Click(object sender, EventArgs e)   //BOTON CORREOS
+        {
+            Jugador[] amigos = Ocasion.DesorganizadoAcertado(Ocasion.jugadores);
+            //Amigos sera el vector que contiene los amigos secretos
+
+            //Ya funciona el almacenamiento de los botones
 
             // La idea es que aca comienze a mostrar los correos 
 
+            MessageBox.Show(Ocasion.SacarNombres(Ocasion.jugadores)[0]);
+            MessageBox.Show(Ocasion.SacarNombres(amigos)[0]);
 
-            MessageBox.Show((Ocasion.SacarNombres(participantes)[1]));
-            // Me esta lanzando un error que creemos que puede ser que no se esta usando la misma variable 
-            //participantes que definimos anteriormente
-        }
-
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
             correo miforma = new correo();
-
+            miforma.Ocasionn = Ocasion;
+            miforma.amigos = amigos;
             miforma.Show();
 
         }
 
+   
+
+
+
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();   //Un boton que simplemente cierra
         }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+        } //NADA LABEL DOBLE CLIC
     }
 }

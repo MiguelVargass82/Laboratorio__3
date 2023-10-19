@@ -22,23 +22,29 @@ namespace tablero_de_prueba
             this.numJugadores = numJugadores;
 
 
-            Jugador aux = new Jugador("Guille", "Correo", "endulzada", "LLeve su regalo");
-            MessageBox.Show(numJugadores.ToString());
-            this.jugadores[0] = aux;
-            MessageBox.Show(jugadores[0].getCorreo());
+           Jugador aux = new Jugador("Guille", "Correo", "endulzada", "LLeve su regalo");
+
+            MessageBox.Show(numJugadores.ToString());           //ESCRIBIO OSCAR    Muestra que si sirve el numero de jugadores
+            this.jugadores[0] = aux;                           //Esto es solo para comprobar lo del vector
+            MessageBox.Show(jugadores[0].getCorreo());        //muestra que si se puede sacar el correo
         }
 
         public void llenarDatos(int num, string nombre, string correo, string endulzada, string regalo)
         {
             //Llenamos el vector de tal manera que cada jugador seria una posicion
             Jugador aux = new Jugador(nombre, correo, endulzada, regalo);
+
             MessageBox.Show(num.ToString());
-            MessageBox.Show(aux.getCorreo());
-            MessageBox.Show(jugadores[0].getCorreo());
-            this.jugadores[0] = aux;
+
+                                                     //La funcion:
+            MessageBox.Show(aux.getCorreo());       //Se encargara de crear un objeto en una posicion dada del vector del objeto
+
             MessageBox.Show(jugadores[0].getCorreo());
 
-
+            this.jugadores[num] = aux;       //La unica que nos interesa en cuestion de codigo de aca   
+            
+            //ESCRIBIO OSCAR
+            MessageBox.Show(jugadores[0].getCorreo());
         }
 
         public string[] SacarNombres(Jugador[] ejemplo)
@@ -46,7 +52,9 @@ namespace tablero_de_prueba
             string[] nombres = new string[numJugadores];
 
             for (int i = 0; i < numJugadores; i++)
-            {                                                   //Extraemos los nombre usando los metodos de la clase Jugador
+            {
+                MessageBox.Show(numJugadores.ToString());
+                MessageBox.Show(i.ToString());        //Extraemos los nombre usando los metodos de la clase Jugador
                 nombres[i] = ejemplo[i].getNombre();
             }
             return nombres;                 //Me retorna un vector con los nombres en el orden en que estan ingresados
@@ -63,6 +71,40 @@ namespace tablero_de_prueba
             }
             return correos;     //Me retorna un vector con los correos en el orden en que estan ingresados
         }
+
+
+        public string[] SacarEndulzadas(Jugador[] ejemplo)
+        {
+            String[] endulzadas = new string[numJugadores];
+
+            for (int i = 0; i < numJugadores; i++)
+            {                                                   //Extraemos las endulzadas usando los metodos de la clase Jugador
+                endulzadas[i] = ejemplo[i].getEndulzadaIdeal();
+            }
+            return endulzadas;     //Me retorna un vector con los correos en el orden en que estan ingresados
+        }
+
+        public string[] SacarRegalos(Jugador[] ejemplo)
+        {
+            String[] regalos = new string[numJugadores];
+
+            for (int i = 0; i < numJugadores; i++)
+            {                                                   //Extraemos las endulzadas usando los metodos de la clase Jugador
+                regalos[i] = ejemplo[i].getRegaloIdeal();
+            }
+            return regalos;     //Me retorna un vector con los correos en el orden en que estan ingresados
+        }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,7 +139,7 @@ namespace tablero_de_prueba
         }
 
 
-        public Jugador[] DesorganizadoAcertado(Jugador[] jugadores)
+        public Jugador[] DesorganizadoAcertado(Jugador[] jugadores) //Nos retornara el vector idealmente desorganizado
         {
 
             Jugador[] auxiliar = new Jugador[numJugadores]; //En este punto auxiliar es el mismo vector jugadores pero es una clonacion
