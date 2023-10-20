@@ -196,8 +196,8 @@ namespace tablero_de_prueba
 
 
             miforma.amigolbl.Text = nombresAmi[0];
-            miforma.amigolbl2.Text = nombresAmi[0];     //Necesitamos que esto aparezca de primeras
-            miforma.amigolbl1.Text = nombresAmi[0];
+                                       //Necesitamos que esto aparezca de primeras
+            
 
             miforma.correolbl.Text = listCorre[0];
             miforma.endulzadalbl.Text = listendulza[0];
