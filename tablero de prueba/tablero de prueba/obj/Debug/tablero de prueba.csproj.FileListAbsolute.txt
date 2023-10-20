@@ -31,3 +31,14 @@ C:\Users\migue\OneDrive\Escritorio\UdeA\3er Semestre\Logica I\Laboratorio 3\Repo
 C:\Users\migue\OneDrive\Escritorio\UdeA\3er Semestre\Logica I\Laboratorio 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.exe
 C:\Users\migue\OneDrive\Escritorio\UdeA\3er Semestre\Logica I\Laboratorio 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.pdb
 C:\Users\HP\Documents\GitHub\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero_de_prueba.correo.resources
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.exe.config
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.exe
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\bin\Debug\tablero de prueba.pdb
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.csproj.AssemblyReference.cache
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero_de_prueba.correo.resources
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero_de_prueba.Form1.resources
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero_de_prueba.Properties.Resources.resources
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.csproj.GenerateResource.cache
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.csproj.CoreCompileInputs.cache
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.exe
+C:\Users\migue\Desktop\UdeA\3er Semestre\Logica y representacion I\Practica 3\Repositorio\Laboratorio__3\tablero de prueba\tablero de prueba\obj\Debug\tablero de prueba.pdb
