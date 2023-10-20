@@ -142,7 +142,7 @@ namespace tablero_de_prueba
             while (ban)
             {
                 bool ban2 = true;
-                int i = 10;
+                int i = 0;
 
                 auxiliar2 = DesorganizarVector(auxiliar);
 

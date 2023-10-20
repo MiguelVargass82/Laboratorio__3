@@ -63,7 +63,7 @@ namespace tablero_de_prueba
 
 
          
-            MessageBox.Show((Ocasionn.SacarNombres(Ocasionn.jugadores)[0]));
+          
 
         }
 

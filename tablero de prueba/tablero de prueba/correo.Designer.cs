@@ -38,10 +38,10 @@
             this.regalolbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.amigolbl2 = new System.Windows.Forms.Label();
-            this.amigolbl1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.salirbtn = new System.Windows.Forms.Button();
+            this.amigolbl2 = new System.Windows.Forms.Label();
+            this.amigolbl1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblPara
@@ -57,7 +57,7 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(282, 102);
+            this.lblMensaje.Location = new System.Drawing.Point(35, 99);
             this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(73, 20);
@@ -96,7 +96,7 @@
             // amigolbl
             // 
             this.amigolbl.AutoSize = true;
-            this.amigolbl.Location = new System.Drawing.Point(147, 137);
+            this.amigolbl.Location = new System.Drawing.Point(282, 137);
             this.amigolbl.Name = "amigolbl";
             this.amigolbl.Size = new System.Drawing.Size(219, 20);
             this.amigolbl.TabIndex = 7;
@@ -125,18 +125,37 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 20);
+            this.label1.Size = new System.Drawing.Size(156, 20);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Amigo secreto:";
+            this.label1.Text = "Tu amigo secreto es:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(20, 172);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 20);
+            this.label2.Size = new System.Drawing.Size(130, 20);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Endulzada ideal de ";
+            this.label2.Text = "Endulzada ideal: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 209);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Regalo ideal:";
+            // 
+            // salirbtn
+            // 
+            this.salirbtn.Location = new System.Drawing.Point(403, 273);
+            this.salirbtn.Name = "salirbtn";
+            this.salirbtn.Size = new System.Drawing.Size(110, 39);
+            this.salirbtn.TabIndex = 15;
+            this.salirbtn.Text = "SALIR";
+            this.salirbtn.UseVisualStyleBackColor = true;
+            this.salirbtn.Click += new System.EventHandler(this.salirbtn_Click);
             // 
             // amigolbl2
             // 
@@ -155,25 +174,6 @@
             this.amigolbl1.Size = new System.Drawing.Size(219, 20);
             this.amigolbl1.TabIndex = 13;
             this.amigolbl1.Text = "Aca aparece el amigo secreto";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 209);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 20);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Regalo ideal de";
-            // 
-            // salirbtn
-            // 
-            this.salirbtn.Location = new System.Drawing.Point(403, 273);
-            this.salirbtn.Name = "salirbtn";
-            this.salirbtn.Size = new System.Drawing.Size(110, 39);
-            this.salirbtn.TabIndex = 15;
-            this.salirbtn.Text = "SALIR";
-            this.salirbtn.UseVisualStyleBackColor = true;
-            this.salirbtn.Click += new System.EventHandler(this.salirbtn_Click);
             // 
             // correo
             // 
@@ -215,8 +215,8 @@
         public System.Windows.Forms.Label amigolbl;
         public System.Windows.Forms.Label endulzadalbl;
         public System.Windows.Forms.Label regalolbl;
+        private System.Windows.Forms.Button salirbtn;
         public System.Windows.Forms.Label amigolbl2;
         public System.Windows.Forms.Label amigolbl1;
-        private System.Windows.Forms.Button salirbtn;
     }
 }
