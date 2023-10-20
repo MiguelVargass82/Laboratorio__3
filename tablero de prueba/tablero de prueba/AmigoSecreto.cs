@@ -101,7 +101,7 @@ namespace tablero_de_prueba
             Random random = new Random();
             Jugador[] clon = (Jugador[])vectorOriginal.Clone(); // Clonamos el vector original para no modificarlo directamente
 
-            for (int i = clon.Length ; i > 0; i--)
+            for (int i = clon.Length - 1; i > 0; i--)
             {
                 int j = random.Next(0, i + 1); // Generar un índice aleatorio
                                                // Intercambiar los elementos en las posiciones i y j
@@ -146,7 +146,7 @@ namespace tablero_de_prueba
 
                 auxiliar2 = DesorganizarVector(auxiliar);
 
-                while (i < jugadores.Length - 1 && ban2)          // Aca comprobamos que ninguna posicion del vector desorganizado sea igual a la del vector original
+                while (i < jugadores.Length  && ban2)          // Aca comprobamos que ninguna posicion del vector desorganizado sea igual a la del vector original
                 {                                          //Osea nadie sea su propio amigo secreto
 
                     if (auxiliar2[i] == jugadoress[i])
