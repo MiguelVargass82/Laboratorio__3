@@ -41,38 +41,45 @@ namespace tablero_de_prueba
                 int valorEnduF;
                 if (int.TryParse(numEndu.Text, out numEnduF) && int.TryParse(frecEndul.Text, out frecEndulF) && int.TryParse(valorEndu.Text, out valorEnduF) && int.TryParse(valorRega.Text, out valorRegaF))
                 {
-                    int tiempoDias = Convert.ToInt32(numEndu.Text) * Convert.ToInt32(frecEndul.Text);
-                    DateTime fechaSeleccionada = dateTimePicker1.Value;
-                    DateTime fechaFinal = fechaSeleccionada.AddDays(tiempoDias);
-                    lblFecha.Text = " El juego terminará el dia: " + fechaFinal.ToString() + "\n Proxima endulzada: " + fechaSeleccionada.AddDays(Convert.ToInt32(frecEndul.Text));
-                    lblFecha.Visible = true;
-                    lblNum.Visible = false;
-                    lblFrec.Visible = false;
-                    numEndu.Visible = false;
-                    frecEndul.Visible = false;
-                    label2.Visible = false;
-                    dateTimePicker1.Visible = false;
-                    valorEndu.Visible = false;
-                    valorRega.Visible = false;
-                    lblValorEndu.Visible = false;
-                    lblValorRega.Visible = false;
+                    if (Convert.ToInt32(numEndu.Text) == 1 || Convert.ToInt32(numEndu.Text) == 2)
+                    {
+                        MessageBox.Show("Deben ser mínimo 3 jugadores");
+                    }
+                    else
+                    {
+                        int tiempoDias = Convert.ToInt32(numEndu.Text) * Convert.ToInt32(frecEndul.Text);
+                        DateTime fechaSeleccionada = dateTimePicker1.Value;
+                        DateTime fechaFinal = fechaSeleccionada.AddDays(tiempoDias);
+                        lblFecha.Text = " El juego terminará el dia: " + fechaFinal.ToString() + "\n Proxima endulzada: " + fechaSeleccionada.AddDays(Convert.ToInt32(frecEndul.Text));
+                        lblFecha.Visible = true;
+                        lblNum.Visible = false;
+                        lblFrec.Visible = false;
+                        numEndu.Visible = false;
+                        frecEndul.Visible = false;
+                        label2.Visible = false;
+                        dateTimePicker1.Visible = false;
+                        valorEndu.Visible = false;
+                        valorRega.Visible = false;
+                        lblValorEndu.Visible = false;
+                        lblValorRega.Visible = false;
 
-                    this.numJug = Convert.ToInt32(contJugad.Value);
+                        this.numJug = Convert.ToInt32(contJugad.Value);
+                        fotoGod.Visible = false;
+                        txtDato1.Visible = true;
+                        txtDato2.Visible = true;
+                        txtDato3.Visible = true;
+                        lblRegalo.Visible = true;
+                        Nombre.Visible = true;
+                        correo.Visible = true;
+                        endulzada.Visible = true;
+                        regalo.Visible = true;
+                        btnSubir.Visible = true;
+                        saltar.Visible = true;
 
-                    txtDato1.Visible = true;
-                    txtDato2.Visible = true;
-                    txtDato3.Visible = true;
-                    lblRegalo.Visible = true;
-                    Nombre.Visible = true;
-                    correo.Visible = true;
-                    endulzada.Visible = true;
-                    regalo.Visible = true;
-                    btnSubir.Visible = true;
-                    saltar.Visible = true;
-
-                   Ocasion = new AmigoSecreto(numJug);   //Definimso un objeto de la clase amigo secreto 
-                                                          //Mediante ocasion podremos acceder a los datos que necesitemos
-                    //Osea que numJug si funciona
+                        Ocasion = new AmigoSecreto(numJug);   //Definimos un objeto de la clase amigo secreto 
+                                                              //Mediante ocasion podremos acceder a los datos que necesitemos
+                                                              //Osea que numJug si funciona
+                    }
                 }
                 else
                 {
@@ -90,6 +97,7 @@ namespace tablero_de_prueba
 
 
             btnJugad.Enabled = false;
+            btnReiniciar.Visible = true;
         }
 
        
@@ -115,29 +123,41 @@ namespace tablero_de_prueba
         int cont = 0;   //Definimos un contador que interara en las posiciones                         
         public void btnSubir_Click(object sender, EventArgs e)  //BOTON SUBIR
         {
-
-            if (cont < numJug)
+            if(Nombre.Text != "" && correo.Text != "" && endulzada.Text != "" && regalo.Text != "") 
             {
 
 
-                string nombrev = Nombre.Text;           //Extraemos los datos de los textbox cada vez que presionemos el boton
-                string correov = correo.Text;
-                string endulzadav = endulzada.Text;
-                string regalov = regalo.Text;
+                if (cont < numJug)
+                {
 
-                Ocasion.llenarDatos(cont, nombrev, correov, endulzadav, regalov);   //Aplicamos la funcion llenar datos para el objeto jugador
 
-                Nombre.Clear();
-                correo.Clear();
-                endulzada.Clear();
-                regalo.Clear();
+                    string nombrev = Nombre.Text;           //Extraemos los datos de los textbox cada vez que presionemos el boton
+                    string correov = correo.Text;
+                    string endulzadav = endulzada.Text;
+                    string regalov = regalo.Text;
 
-                cont++;
+                    Ocasion.llenarDatos(cont, nombrev, correov, endulzadav, regalov);   //Aplicamos la funcion llenar datos para el objeto jugador
+
+                    Nombre.Clear();
+                    correo.Clear();
+                    endulzada.Clear();
+                    regalo.Clear();
+
+                    cont++;
+                }
+                else
+                {
+                    MessageBox.Show("Estas definiendo mas jugadores de los que estableciste anteriormente por favor presiona CORREOS o SALIR");
+                }
+
             }
             else
             {
-                MessageBox.Show("Estas definiendo mas jugadores de los que estableciste anteriormente");
+                MessageBox.Show("Tienes espacios sin llenar porfavor llenalos");
             }
+                
+
+            
         }//Fin del evento boton subir
        
 
@@ -207,5 +227,11 @@ namespace tablero_de_prueba
         private void lblFecha_Click(object sender, EventArgs e)
         {
         } //NADA LABEL DOBLE CLIC
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            btnJugad.Enabled = true;
+            btnReiniciar.Visible = false;
+        }
     }
 }

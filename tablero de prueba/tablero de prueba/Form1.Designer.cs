@@ -39,7 +39,6 @@
             this.lblFrec = new System.Windows.Forms.Label();
             this.frecEndul = new System.Windows.Forms.TextBox();
             this.contJugad = new System.Windows.Forms.NumericUpDown();
-            this.NombreCombobox = new System.Windows.Forms.ComboBox();
             this.txtDato1 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.TextBox();
             this.txtDato2 = new System.Windows.Forms.Label();
@@ -54,10 +53,13 @@
             this.lblValorRega = new System.Windows.Forms.Label();
             this.valorRega = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReiniciar = new System.Windows.Forms.Button();
             this.valorEndu = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.fotoGod = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.contJugad)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoGod)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -74,10 +76,11 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.BackColor = System.Drawing.Color.Tan;
+            this.lblFecha.BackColor = System.Drawing.Color.Chocolate;
             this.lblFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFecha.Font = new System.Drawing.Font("Nirmala UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.lblFecha.Location = new System.Drawing.Point(9, 503);
+            this.lblFecha.Font = new System.Drawing.Font("Nirmala UI", 9.3F, System.Drawing.FontStyle.Bold);
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblFecha.Location = new System.Drawing.Point(0, 511);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(67, 27);
@@ -114,7 +117,7 @@
             // 
             this.btnJugad.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnJugad.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnJugad.Location = new System.Drawing.Point(286, 445);
+            this.btnJugad.Location = new System.Drawing.Point(174, 445);
             this.btnJugad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnJugad.Name = "btnJugad";
             this.btnJugad.Size = new System.Drawing.Size(112, 35);
@@ -173,23 +176,11 @@
             this.contJugad.TabIndex = 0;
             this.contJugad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // NombreCombobox
-            // 
-            this.NombreCombobox.FormattingEnabled = true;
-            this.NombreCombobox.Location = new System.Drawing.Point(518, 200);
-            this.NombreCombobox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.NombreCombobox.Name = "NombreCombobox";
-            this.NombreCombobox.Size = new System.Drawing.Size(180, 28);
-            this.NombreCombobox.TabIndex = 13;
-            this.NombreCombobox.Text = "Participantes";
-            this.NombreCombobox.Visible = false;
-            this.NombreCombobox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // txtDato1
             // 
             this.txtDato1.AutoSize = true;
             this.txtDato1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtDato1.Location = new System.Drawing.Point(621, 263);
+            this.txtDato1.Location = new System.Drawing.Point(594, 218);
             this.txtDato1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtDato1.Name = "txtDato1";
             this.txtDato1.Size = new System.Drawing.Size(219, 20);
@@ -200,7 +191,7 @@
             // Nombre
             // 
             this.Nombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Nombre.Location = new System.Drawing.Point(626, 288);
+            this.Nombre.Location = new System.Drawing.Point(598, 243);
             this.Nombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(148, 26);
@@ -211,7 +202,7 @@
             // 
             this.txtDato2.AutoSize = true;
             this.txtDato2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtDato2.Location = new System.Drawing.Point(621, 355);
+            this.txtDato2.Location = new System.Drawing.Point(594, 311);
             this.txtDato2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtDato2.Name = "txtDato2";
             this.txtDato2.Size = new System.Drawing.Size(210, 20);
@@ -222,7 +213,7 @@
             // correo
             // 
             this.correo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.correo.Location = new System.Drawing.Point(626, 380);
+            this.correo.Location = new System.Drawing.Point(598, 335);
             this.correo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.correo.Name = "correo";
             this.correo.Size = new System.Drawing.Size(148, 26);
@@ -233,7 +224,7 @@
             // 
             this.txtDato3.AutoSize = true;
             this.txtDato3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtDato3.Location = new System.Drawing.Point(621, 438);
+            this.txtDato3.Location = new System.Drawing.Point(594, 394);
             this.txtDato3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtDato3.Name = "txtDato3";
             this.txtDato3.Size = new System.Drawing.Size(276, 20);
@@ -244,7 +235,7 @@
             // endulzada
             // 
             this.endulzada.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.endulzada.Location = new System.Drawing.Point(626, 474);
+            this.endulzada.Location = new System.Drawing.Point(598, 429);
             this.endulzada.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.endulzada.Name = "endulzada";
             this.endulzada.Size = new System.Drawing.Size(148, 26);
@@ -255,7 +246,7 @@
             // 
             this.lblRegalo.AutoSize = true;
             this.lblRegalo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRegalo.Location = new System.Drawing.Point(621, 518);
+            this.lblRegalo.Location = new System.Drawing.Point(594, 474);
             this.lblRegalo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegalo.Name = "lblRegalo";
             this.lblRegalo.Size = new System.Drawing.Size(333, 20);
@@ -266,7 +257,7 @@
             // regalo
             // 
             this.regalo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.regalo.Location = new System.Drawing.Point(626, 543);
+            this.regalo.Location = new System.Drawing.Point(598, 498);
             this.regalo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.regalo.Name = "regalo";
             this.regalo.Size = new System.Drawing.Size(148, 26);
@@ -276,7 +267,7 @@
             // btnSubir
             // 
             this.btnSubir.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSubir.Location = new System.Drawing.Point(644, 598);
+            this.btnSubir.Location = new System.Drawing.Point(616, 554);
             this.btnSubir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSubir.Name = "btnSubir";
             this.btnSubir.Size = new System.Drawing.Size(112, 35);
@@ -289,9 +280,9 @@
             // saltar
             // 
             this.saltar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.saltar.Location = new System.Drawing.Point(850, 598);
+            this.saltar.Location = new System.Drawing.Point(824, 554);
             this.saltar.Name = "saltar";
-            this.saltar.Size = new System.Drawing.Size(124, 31);
+            this.saltar.Size = new System.Drawing.Size(112, 31);
             this.saltar.TabIndex = 23;
             this.saltar.Text = "Correos";
             this.saltar.UseVisualStyleBackColor = true;
@@ -330,6 +321,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnReiniciar);
             this.groupBox1.Controls.Add(this.lblFecha);
             this.groupBox1.Controls.Add(this.btnJugad);
             this.groupBox1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,6 +335,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configuración";
             // 
+            // btnReiniciar
+            // 
+            this.btnReiniciar.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnReiniciar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnReiniciar.Location = new System.Drawing.Point(296, 445);
+            this.btnReiniciar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReiniciar.Name = "btnReiniciar";
+            this.btnReiniciar.Size = new System.Drawing.Size(112, 35);
+            this.btnReiniciar.TabIndex = 8;
+            this.btnReiniciar.Text = "Reiniciar";
+            this.btnReiniciar.UseVisualStyleBackColor = true;
+            this.btnReiniciar.Visible = false;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
+            // 
             // valorEndu
             // 
             this.valorEndu.Location = new System.Drawing.Point(86, 426);
@@ -352,15 +358,28 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(626, 682);
+            this.button1.Location = new System.Drawing.Point(824, 629);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.Size = new System.Drawing.Size(122, 48);
             this.button1.TabIndex = 8;
             this.button1.Text = "Salir";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // fotoGod
+            // 
+            this.fotoGod.BackColor = System.Drawing.Color.Transparent;
+            this.fotoGod.Image = ((System.Drawing.Image)(resources.GetObject("fotoGod.Image")));
+            this.fotoGod.Location = new System.Drawing.Point(551, 178);
+            this.fotoGod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fotoGod.Name = "fotoGod";
+            this.fotoGod.Size = new System.Drawing.Size(422, 431);
+            this.fotoGod.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoGod.TabIndex = 30;
+            this.fotoGod.TabStop = false;
             // 
             // Form1
             // 
@@ -369,7 +388,8 @@
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1054, 741);
+            this.ClientSize = new System.Drawing.Size(1054, 742);
+            this.Controls.Add(this.fotoGod);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.valorEndu);
             this.Controls.Add(this.valorRega);
@@ -385,7 +405,6 @@
             this.Controls.Add(this.txtDato2);
             this.Controls.Add(this.Nombre);
             this.Controls.Add(this.txtDato1);
-            this.Controls.Add(this.NombreCombobox);
             this.Controls.Add(this.contJugad);
             this.Controls.Add(this.frecEndul);
             this.Controls.Add(this.lblFrec);
@@ -404,6 +423,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.contJugad)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoGod)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,7 +441,6 @@
         private System.Windows.Forms.Label lblFrec;
         private System.Windows.Forms.TextBox frecEndul;
         private System.Windows.Forms.NumericUpDown contJugad;
-        private System.Windows.Forms.ComboBox NombreCombobox;
         private System.Windows.Forms.Label txtDato1;
         private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.Label txtDato2;
@@ -438,6 +457,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox valorEndu;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReiniciar;
+        private System.Windows.Forms.PictureBox fotoGod;
     }
 }
 

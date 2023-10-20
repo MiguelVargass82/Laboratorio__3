@@ -22,29 +22,19 @@ namespace tablero_de_prueba
             this.numJugadores = numJugadores;
 
 
-            Jugador aux = new Jugador("Guille", "Correo", "endulzada", "LLeve su regalo");
-
-            MessageBox.Show(numJugadores.ToString());           //ESCRIBIO OSCAR    Muestra que si sirve el numero de jugadores
-            this.jugadores[0] = aux;                           //Esto es solo para comprobar lo del vector
-            MessageBox.Show(jugadores[0].getCorreo());        //muestra que si se puede sacar el correo
+          
         }
 
         public void llenarDatos(int num, string nombre, string correo, string endulzada, string regalo)
         {
             //Llenamos el vector de tal manera que cada jugador seria una posicion
             Jugador aux = new Jugador(nombre, correo, endulzada, regalo);
-
-            MessageBox.Show(num.ToString());
-
+           
             //La funcion:
-            MessageBox.Show(aux.getCorreo());       //Se encargara de crear un objeto en una posicion dada del vector del objeto
-
-            MessageBox.Show(jugadores[0].getCorreo());
+              //Se encargara de crear un objeto en una posicion dada del vector del objeto
 
             this.jugadores[num] = aux;       //La unica que nos interesa en cuestion de codigo de aca   
-
-            //ESCRIBIO OSCAR
-            MessageBox.Show(jugadores[0].getCorreo());
+         
         }
 
         public string[] SacarNombres(Jugador[] ejemplo)
@@ -53,7 +43,7 @@ namespace tablero_de_prueba
 
             for (int i = 0; i < numJugadores; i++)
             {
-              // MessageBox.Show(numJugadores.ToString());
+           
              //   MessageBox.Show(i.ToString());        //Extraemos los nombre usando los metodos de la clase Jugador
                 nombres[i] = ejemplo[i].getNombre();
             }
