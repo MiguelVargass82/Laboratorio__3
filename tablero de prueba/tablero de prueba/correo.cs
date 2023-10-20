@@ -46,8 +46,8 @@ namespace tablero_de_prueba
             {
 
                 amigolbl.Text = nombresAmigos[cont];
-                amigolbl2.Text = nombresAmigos[cont];     //Necesitamos que esto aparezca de primeras
-                amigolbl1.Text = nombresAmigos[cont];
+                   //Necesitamos que esto aparezca de primeras
+               
 
                 correolbl.Text = listCorreos[cont];
                 endulzadalbl.Text = listendulzadas[cont];

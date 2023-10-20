@@ -123,29 +123,41 @@ namespace tablero_de_prueba
         int cont = 0;   //Definimos un contador que interara en las posiciones                         
         public void btnSubir_Click(object sender, EventArgs e)  //BOTON SUBIR
         {
-
-            if (cont < numJug)
+            if(Nombre.Text != "" && correo.Text != "" && endulzada.Text != "" && regalo.Text != "") 
             {
 
 
-                string nombrev = Nombre.Text;           //Extraemos los datos de los textbox cada vez que presionemos el boton
-                string correov = correo.Text;
-                string endulzadav = endulzada.Text;
-                string regalov = regalo.Text;
+                if (cont < numJug)
+                {
 
-                Ocasion.llenarDatos(cont, nombrev, correov, endulzadav, regalov);   //Aplicamos la funcion llenar datos para el objeto jugador
 
-                Nombre.Clear();
-                correo.Clear();
-                endulzada.Clear();
-                regalo.Clear();
+                    string nombrev = Nombre.Text;           //Extraemos los datos de los textbox cada vez que presionemos el boton
+                    string correov = correo.Text;
+                    string endulzadav = endulzada.Text;
+                    string regalov = regalo.Text;
 
-                cont++;
+                    Ocasion.llenarDatos(cont, nombrev, correov, endulzadav, regalov);   //Aplicamos la funcion llenar datos para el objeto jugador
+
+                    Nombre.Clear();
+                    correo.Clear();
+                    endulzada.Clear();
+                    regalo.Clear();
+
+                    cont++;
+                }
+                else
+                {
+                    MessageBox.Show("Estas definiendo mas jugadores de los que estableciste anteriormente por favor presiona CORREOS o SALIR");
+                }
+
             }
             else
             {
-                MessageBox.Show("Estas definiendo mas jugadores de los que estableciste anteriormente");
+                MessageBox.Show("Tienes espacios sin llenar porfavor llenalos");
             }
+                
+
+            
         }//Fin del evento boton subir
        
 
@@ -184,8 +196,8 @@ namespace tablero_de_prueba
 
 
             miforma.amigolbl.Text = nombresAmi[0];
-            miforma.amigolbl2.Text = nombresAmi[0];     //Necesitamos que esto aparezca de primeras
-            miforma.amigolbl1.Text = nombresAmi[0];
+                                       //Necesitamos que esto aparezca de primeras
+            
 
             miforma.correolbl.Text = listCorre[0];
             miforma.endulzadalbl.Text = listendulza[0];
