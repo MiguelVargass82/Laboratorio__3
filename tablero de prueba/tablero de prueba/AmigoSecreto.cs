@@ -22,7 +22,7 @@ namespace tablero_de_prueba
             this.numJugadores = numJugadores;
 
 
-           Jugador aux = new Jugador("Guille", "Correo", "endulzada", "LLeve su regalo");
+            Jugador aux = new Jugador("Guille", "Correo", "endulzada", "LLeve su regalo");
 
             MessageBox.Show(numJugadores.ToString());           //ESCRIBIO OSCAR    Muestra que si sirve el numero de jugadores
             this.jugadores[0] = aux;                           //Esto es solo para comprobar lo del vector
@@ -36,13 +36,13 @@ namespace tablero_de_prueba
 
             MessageBox.Show(num.ToString());
 
-                                                     //La funcion:
+            //La funcion:
             MessageBox.Show(aux.getCorreo());       //Se encargara de crear un objeto en una posicion dada del vector del objeto
 
             MessageBox.Show(jugadores[0].getCorreo());
 
             this.jugadores[num] = aux;       //La unica que nos interesa en cuestion de codigo de aca   
-            
+
             //ESCRIBIO OSCAR
             MessageBox.Show(jugadores[0].getCorreo());
         }
@@ -53,8 +53,8 @@ namespace tablero_de_prueba
 
             for (int i = 0; i < numJugadores; i++)
             {
-                MessageBox.Show(numJugadores.ToString());
-                MessageBox.Show(i.ToString());        //Extraemos los nombre usando los metodos de la clase Jugador
+              // MessageBox.Show(numJugadores.ToString());
+             //   MessageBox.Show(i.ToString());        //Extraemos los nombre usando los metodos de la clase Jugador
                 nombres[i] = ejemplo[i].getNombre();
             }
             return nombres;                 //Me retorna un vector con los nombres en el orden en que estan ingresados
@@ -96,33 +96,21 @@ namespace tablero_de_prueba
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        public static Jugador[] DesorganizarVector(Jugador[] vector)        //Literalmente desorganiza el vector
+        public Jugador[] DesorganizarVector(Jugador[] vectorOriginal)
         {
             Random random = new Random();
+            Jugador[] clon = (Jugador[])vectorOriginal.Clone(); // Clonamos el vector original para no modificarlo directamente
 
-            for (int i = vector.Length - 1; i > 0; i--)
+            for (int i = clon.Length ; i > 0; i--)
             {
                 int j = random.Next(0, i + 1); // Generar un índice aleatorio
-
-                // Intercambiar los elementos en las posiciones i y j
-                Jugador temp = vector[i];
-                vector[i] = vector[j];
-                vector[j] = temp;
+                                               // Intercambiar los elementos en las posiciones i y j
+                Jugador temp = clon[i];
+                clon[i] = clon[j];
+                clon[j] = temp;
             }
-            return vector;
+
+            return clon;
         }
 
 
@@ -139,13 +127,13 @@ namespace tablero_de_prueba
         }
 
 
-        public Jugador[] DesorganizadoAcertado(Jugador[] jugadores) //Nos retornara el vector idealmente desorganizado
+        public Jugador[] DesorganizadoAcertado(Jugador[] jugadoress) //Nos retornara el vector idealmente desorganizado
         {
 
             Jugador[] auxiliar = new Jugador[numJugadores]; //En este punto auxiliar es el mismo vector jugadores pero es una clonacion
             for (int ii = 0; ii < numJugadores; ii++)
             {
-                auxiliar[ii] = jugadores[ii];
+                auxiliar[ii] = jugadoress[ii];       //clonacion de vectores
             }
             bool ban = true;
             Jugador[] auxiliar2 = new Jugador[numJugadores];
@@ -161,7 +149,7 @@ namespace tablero_de_prueba
                 while (i < jugadores.Length - 1 && ban2)          // Aca comprobamos que ninguna posicion del vector desorganizado sea igual a la del vector original
                 {                                          //Osea nadie sea su propio amigo secreto
 
-                    if (auxiliar2[i] == jugadores[i])
+                    if (auxiliar2[i] == jugadoress[i])
                     {                                    //En el momento en que alguna posicion coincide el ciclo pequeño se cierra y quedan las condiciones ...
                         ban2 = false;
                         //...para que el ciclo grande se vuelva a ejecutar
@@ -171,10 +159,10 @@ namespace tablero_de_prueba
                 if (ban2)
                 {
                     ban = false;
-                }             
+                }
             }
             return auxiliar2;
 
-        } //Fin funcion
+        } //Fin funcion Desorganizacion ideal     
     }
 }

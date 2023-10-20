@@ -151,8 +151,8 @@ namespace tablero_de_prueba
 
             // La idea es que aca comienze a mostrar los correos 
 
-            MessageBox.Show(Ocasion.SacarNombres(Ocasion.jugadores)[0]);
-            MessageBox.Show(Ocasion.SacarNombres(amigos)[0]);
+         //   MessageBox.Show(Ocasion.SacarNombres(Ocasion.jugadores)[0]);
+           // MessageBox.Show(Ocasion.SacarNombres(amigos)[0]);
 
 
            string[] nombresAmi = Ocasion.SacarNombres(amigos); //Lista de amigos secretos

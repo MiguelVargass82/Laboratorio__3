@@ -38,7 +38,7 @@ namespace tablero_de_prueba
         {           
         } //NADA
 
-        int cont = 0;
+        int cont = 1;
         private void button1_Click(object sender, EventArgs e) //BOTON SIGUIENTE  de correos
         {
             //Se encargara de que cada vez que le demos siguiente nos va a mostrar el siguiente correo y el siguiente amigo secreto
@@ -53,6 +53,8 @@ namespace tablero_de_prueba
                 endulzadalbl.Text = listendulzadas[cont];
                 regalolbl.Text = listregalo[cont];
                 cont++;
+
+
             }
             else
             {
